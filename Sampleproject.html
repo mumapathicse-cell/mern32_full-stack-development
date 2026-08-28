@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Munch - Online Food Store</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+             
+            <a href="#" class="flex items-center gap-2">
+                <div class="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <span class="text-2xl font-bold text-orange-500">
+                    Food Munch
+                </span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center gap-8 font-medium">
+                <li>
+                    <a href="#home" class="hover:text-orange-500 transition">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu" class="hover:text-orange-500 transition">
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#offers" class="hover:text-orange-500 transition">
+                        Offers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about" class="hover:text-orange-500 transition">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="hover:text-orange-500 transition">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button
+                id="menuBtn"
+                class="md:hidden text-2xl text-gray-700"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t bg-white">
+            <ul class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <li><a href="#home" class="mobile-link">Home</a></li>
+                <li><a href="#menu" class="mobile-link">Menu</a></li>
+                <li><a href="#offers" class="mobile-link">Offers</a></li>
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <main>
+
+        <section
+            id="home"
+            class="min-h-[600px] flex items-center bg-cover bg-center"
+            style="
+                background-image:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80');
+            "
+        >
+
+            <div class="max-w-7xl mx-auto px-6 w-full text-center text-white">
+
+                <p class="text-orange-400 font-semibold text-lg mb-3">
+                    Welcome to Food Munch
+                </p>
+
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Delicious Food,
+                    <span class="text-orange-400">
+                        Delivered Fast
+                    </span>
+                </h1>
+
+                <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-200 mb-8">
+                    Discover delicious meals, exciting offers and your
+                    favorite food delivered right to your doorstep.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+                    <a
+                        href="#menu"
+                        class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition"
+                    >
+                        Explore Menu
+                    </a>
+
+                    <a
+                        href="#offers"
+                        class="border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition"
+                    >
+                        View Offers
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= WHY CHOOSE US ================= -->
+        <section class="py-16 bg-gray-50">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="text-center mb-12">
+
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Why Choose Food Munch?
+                    </h2>
+
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        We make ordering your favorite food simple,
+                        convenient and enjoyable.
+                    </p>
+
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Feature 1 -->
+                    <article class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-lg transition">
+
+                        <div class="w-16 h-16 mx-auto mb-5 bg-orange-100 text-orange-500 rounded-full flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-bowl-food"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">
+                            Fresh Food
+                        </h3>
+
+                        <p class="text-gray-600">
+                            Enjoy fresh and delicious meals prepared
+                            with quality ingredients.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Feature 2 -->
+                    <article class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-lg transition">
+
+                        <div class="w-16 h-16 mx-auto mb-5 bg-orange-100 text-orange-500 rounded-full flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">
+                            Fast Delivery
+                        </h3>
+
+                        <p class="text-gray-600">
+                            Get your favorite food delivered quickly
+                            and conveniently.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Feature 3 -->
+                    <article class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-lg transition">
+
+                        <div class="w-16 h-16 mx-auto mb-5 bg-orange-100 text-orange-500 rounded-full flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">
+                            Best Offers
+                        </h3>
+
+                        <p class="text-gray-600">
+                            Save more with our exciting discounts
+                            and special food offers.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= MENU SECTION ================= -->
+        <section id="menu" class="py-16">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="text-center mb-12">
+
+                    <p class="text-orange-500 font-semibold">
+                        OUR MENU
+                    </p>
+
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                        Popular Food Items
+                    </h2>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+
+                    <!-- Food Card 1 -->
+                    <article class="bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-2 transition duration-300">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+                            alt="Cheese Burger"
+                            class="w-full h-52 object-cover"
+                        >
+
+                        <div class="p-5">
+
+                            <span class="text-sm text-orange-500 font-semibold">
+                                Burger
+                            </span>
+
+                            <h3 class="text-xl font-bold mt-2">
+                                Cheese Burger
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Juicy burger with fresh vegetables
+                                and melted cheese.
+                            </p>
+
+                            <div class="flex justify-between items-center mt-5">
+
+                                <span class="text-xl font-bold">
+                                    ₹149
+                                </span>
+
+                                <button
+                                    onclick="addToCart('Cheese Burger', 149)"
+                                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                                >
+                                    Add
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+
+                    <!-- Food Card 2 -->
+                    <article class="bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-2 transition duration-300">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
+                            alt="Pizza"
+                            class="w-full h-52 object-cover"
+                        >
+
+                        <div class="p-5">
+
+                            <span class="text-sm text-orange-500 font-semibold">
+                                Pizza
+                            </span>
+
+                            <h3 class="text-xl font-bold mt-2">
+                                Cheese Pizza
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Crispy crust topped with cheese,
+                                vegetables and herbs.
+                            </p>
+
+                            <div class="flex justify-between items-center mt-5">
+
+                                <span class="text-xl font-bold">
+                                    ₹249
+                                </span>
+
+                                <button
+                                    onclick="addToCart('Cheese Pizza', 249)"
+                                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                                >
+                                    Add
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+
+                    <!-- Food Card 3 -->
+                    <article class="bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-2 transition duration-300">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+                            alt="Samosa"
+                            class="w-full h-52 object-cover"
+                        >
+
+                        <div class="p-5">
+
+                            <span class="text-sm text-orange-500 font-semibold">
+                                Snacks
+                            </span>
+
+                            <h3 class="text-xl font-bold mt-2">
+                                Samosa
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Crispy golden samosas filled with
+                                delicious spicy potato.
+                            </p>
+
+                            <div class="flex justify-between items-center mt-5">
+
+                                <span class="text-xl font-bold">
+                                    ₹60
+                                </span>
+
+                                <button
+                                    onclick="addToCart('Samosa', 60)"
+                                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                                >
+                                    Add
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+
+                    <!-- Food Card 4 -->
+                    <article class="bg-white rounded-xl overflow-hidden shadow-md hover:-translate-y-2 transition duration-300">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
+                            alt="Healthy Bowl"
+                            class="w-full h-52 object-cover"
+                        >
+
+                        <div class="p-5">
+
+                            <span class="text-sm text-orange-500 font-semibold">
+                                Healthy
+                            </span>
+
+                            <h3 class="text-xl font-bold mt-2">
+                                Healthy Bowl
+                            </h3>
+
+                            <p class="text-gray-600 mt-2">
+                                Fresh vegetables, grains and healthy
+                                ingredients.
+                            </p>
+
+                            <div class="flex justify-between items-center mt-5">
+
+                                <span class="text-xl font-bold">
+                                    ₹199
+                                </span>
+
+                                <button
+                                    onclick="addToCart('Healthy Bowl', 199)"
+                                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                                >
+                                    Add
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= OFFERS ================= -->
+        <section id="offers" class="py-16 bg-orange-50">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                    <div>
+
+                        <span class="text-orange-500 font-bold">
+                            SPECIAL OFFER
+                        </span>
+
+                        <h2 class="text-3xl md:text-5xl font-bold mt-3 mb-5">
+                            Get 30% OFF
+                            <br>
+                            Your First Order
+                        </h2>
+
+                        <p class="text-gray-600 mb-7">
+                            Order your favorite food today and enjoy
+                            an exclusive discount on your first order.
+                        </p>
+
+                        <button
+                            onclick="showOffer()"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-lg font-semibold"
+                        >
+                            Claim Offer
+                        </button>
+
+                    </div>
+
+                    <div>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
+                            alt="Food offer"
+                            class="rounded-2xl shadow-xl w-full"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="py-16">
+
+            <div class="max-w-5xl mx-auto px-6 text-center">
+
+                <p class="text-orange-500 font-semibold">
+                    ABOUT US
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">
+                    Your Favorite Food, One Click Away
+                </h2>
+
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Food Munch is an online food store designed to make
+                    discovering and ordering delicious food simple.
+                    Browse our menu, explore special offers and enjoy
+                    a convenient food ordering experience.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="py-16 bg-gray-900 text-white">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <div>
+
+                        <h3 class="text-2xl font-bold text-orange-400 mb-4">
+                            Food Munch
+                        </h3>
+
+                        <p class="text-gray-400">
+                            Delicious food delivered to your doorstep.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 class="text-xl font-bold mb-4">
+                            Quick Links
+                        </h3>
+
+                        <ul class="space-y-2 text-gray-400">
+
+                            <li>
+                                <a href="#home" class="hover:text-orange-400">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#menu" class="hover:text-orange-400">
+                                    Menu
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#offers" class="hover:text-orange-400">
+                                    Offers
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 class="text-xl font-bold mb-4">
+                            Contact Us
+                        </h3>
+
+                        <ul class="space-y-3 text-gray-400">
+
+                            <li>
+                                <i class="fa-solid fa-phone mr-2"></i>
+                                +91 98765 43210
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-envelope mr-2"></i>
+                                hello@foodmunch.com
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-location-dot mr-2"></i>
+                                Chennai, India
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="bg-black text-gray-400 py-5 text-center">
+
+            <p>
+                © 2026 Food Munch. All Rights Reserved.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ================= CART ================= -->
+
+    <div
+        id="cartMessage"
+        class="fixed bottom-5 right-5 hidden bg-green-600 text-white px-6 py-4 rounded-lg shadow-xl"
+    >
+        Item added to cart!
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Mobile menu
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", function () {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+        // Close mobile menu after clicking link
+        const mobileLinks =
+            document.querySelectorAll(".mobile-link");
+
+        mobileLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mobileMenu.classList.add("hidden");
+
+            });
+
+        });
+
+
+        // Cart
+        let cart = [];
+
+        function addToCart(itemName, price) {
+
+            cart.push({
+                name: itemName,
+                price: price
+            });
+
+            const message =
+                document.getElementById("cartMessage");
+
+            message.textContent =
+                itemName + " added to cart!";
+
+            message.classList.remove("hidden");
+
+            setTimeout(function () {
+
+                message.classList.add("hidden");
+
+            }, 2000);
+
+            console.log("Cart:", cart);
+
+        }
+
+
+        // Offer
+        function showOffer() {
+
+            alert(
+                "Congratulations! Use coupon code FOOD30 to get 30% OFF your first order."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
