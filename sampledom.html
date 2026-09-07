@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Sample DOM</title>
+    </head>
+    <body>
+        <p id="para">
+            <p id = "par1">click</p>
+        </p>
+    </body>
+   
+    <button onclick="changeContent()">Click Me</button>
+    <script >
+        let betclick= document.getElementById("par1");
+        betclick.addEventListener("click", changeContent);
+        function changeContent() {
+        var para = document.getElementById("para");
+        para.innerHTML = "Hello, this is a sample DOM manipulation!";
+        para.style.color = "blue";
+        para.style.fontSize = "20px";
+        para.textContent = "This is a sample text content.";
+        }
+    </script>
+</html>

@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String         @id @default(cuid())
+  email           String         @unique
+  passwordHash    String
+  role            UserRole       @default(MEMBER)
+  mobile          String?
+  mobileVerified  Boolean        @default(false)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  profile         Profile?
+  sentInterests   Interest[]     @relation("SentInterests")
+  receivedInterests Interest[]   @relation("ReceivedInterests")
+  sentMessages    Message[]      @relation("SentMessages")
+}
+
+model Profile {
+  id           String   @id @default(cuid())
+  userId       String   @unique
+  displayName  String
+  gender       String?
+  dateOfBirth  DateTime?
+  city         String?
+  community    String?
+  education    String?
+  profession   String?
+  about        String?
+  isVisible    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Interest {
+  id         String         @id @default(cuid())
+  senderId   String
+  receiverId String
+  status     InterestStatus @default(PENDING)
+  createdAt  DateTime       @default(now())
+  sender     User           @relation("SentInterests", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver   User           @relation("ReceivedInterests", fields: [receiverId], references: [id], onDelete: Cascade)
+  @@unique([senderId, receiverId])
+  @@index([receiverId, status])
+}
+
+model Message {
+  id          String   @id @default(cuid())
+  senderId    String
+  receiverId  String
+  body        String
+  createdAt   DateTime @default(now())
+  readAt      DateTime?
+  sender      User     @relation("SentMessages", fields: [senderId], references: [id], onDelete: Cascade)
+  @@index([senderId, receiverId, createdAt])
+}
+
+enum UserRole {
+  MEMBER
+  ADMIN
+}
+
+enum InterestStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+}
