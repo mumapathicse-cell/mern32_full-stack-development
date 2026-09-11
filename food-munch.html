@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Munch</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-shadow {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <header class="bg-white border-b border-yellow-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-full bg-yellow-400 flex items-center justify-center text-lg font-bold text-black">F</div>
+        <div>
+          <div class="font-bold text-lg">Food Munch</div>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#" class="text-gray-700 hover:text-yellow-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600">Menu</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600">Offer</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600">Contact</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3 text-sm">
+        <span class="text-gray-600">Why choose us?</span>
+        <span class="text-gray-600">Explore menu</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-bg w-full h-[420px] flex items-center justify-center">
+      <div class="text-center text-white">
+        <h1 class="text-3xl md:text-5xl font-bold">Get Delicious Food Anytime</h1>
+        <p class="mt-3 text-lg text-yellow-200">Eat Smart & Healthy</p>
+        <div class="mt-6 flex justify-center gap-4">
+          <button class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full">View Menu</button>
+          <button class="bg-white/20 border border-white text-white px-6 py-3 rounded-full">Order Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900">Why Choose Us?</h2>
+        <p class="text-gray-600 mt-2">We use both original recipes and classic versions of famous food items.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 text-center card-shadow">
+          <div class="text-4xl mb-4">🍽️</div>
+          <h3 class="font-bold text-xl">Food Service</h3>
+          <p class="text-gray-600 mt-2 text-sm">Experience food prepared fresh with authentic taste and quality ingredients.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center card-shadow">
+          <div class="text-4xl mb-4">🥗</div>
+          <h3 class="font-bold text-xl">Fresh Food</h3>
+          <p class="text-gray-600 mt-2 text-sm">Enjoy healthy dishes made using natural produce and fresh ingredients.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center card-shadow">
+          <div class="text-4xl mb-4">🚚</div>
+          <h3 class="font-bold text-xl">Fast Delivery</h3>
+          <p class="text-gray-600 mt-2 text-sm">Quick and reliable delivery service to your door step without delay.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center card-shadow">
+          <div class="text-4xl mb-4">💰</div>
+          <h3 class="font-bold text-xl">Best Offers</h3>
+          <p class="text-gray-600 mt-2 text-sm">Get exclusive discounts and limited-time offers on every order.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 pb-20">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900">Explore Menu</h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <article class="bg-white rounded-xl overflow-hidden card-shadow">
+          <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Starters" />
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Non-Veg Starters</h3>
+            <a href="#" class="inline-block mt-3 text-sm text-blue-600 font-medium">View All →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-xl overflow-hidden card-shadow">
+          <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Veg Starters" />
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Veg Starters</h3>
+            <a href="#" class="inline-block mt-3 text-sm text-blue-600 font-medium">View All →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-xl overflow-hidden card-shadow">
+          <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" alt="Soups" />
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Soups</h3>
+            <a href="#" class="inline-block mt-3 text-sm text-blue-600 font-medium">View All →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-xl overflow-hidden card-shadow">
+          <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="Fish and Sea Food" />
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Fish & Sea Food</h3>
+            <a href="#" class="inline-block mt-3 text-sm text-blue-600 font-medium">View All →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-xl overflow-hidden card-shadow">
+          <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Main Course" />
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Main Course</h3>
+            <a href="#" class="inline-block mt-3 text-sm text-blue-600 font-medium">View All →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-xl overflow-hidden card-shadow">
+          <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80" alt="Noodles" />
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Noodles</h3>
+            <a href="#" class="inline-block mt-3 text-sm text-blue-600 font-medium">View All →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-xl overflow-hidden card-shadow">
+          <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=800&q=80" alt="Salads" />
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Salads</h3>
+            <a href="#" class="inline-block mt-3 text-sm text-blue-600 font-medium">View All →</a>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-xl overflow-hidden card-shadow">
+          <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" alt="Desserts" />
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Desserts</h3>
+            <a href="#" class="inline-block mt-3 text-sm text-blue-600 font-medium">View All →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-12 text-center">
+      <div class="flex flex-col items-center gap-5">
+        <div class="w-20 h-20 rounded-full bg-yellow-300 flex items-center justify-center text-3xl">🥗</div>
+        <h2 class="text-3xl font-bold text-gray-900">Fresh, Healthy, Organic, Delicious Fruits</h2>
+        <p class="max-w-2xl text-gray-600">Say no to harmful chemicals and go fully organic with our range of fresh fruits and vegetables. We bring the purity of nature to your table.</p>
+        <button class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full">Watch Video</button>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-xl">
+          <h2 class="text-3xl font-bold text-gray-900">Delivery and Payment</h2>
+          <p class="mt-3 text-gray-600">Enjoy hassle-free payment with the multiple payment options available for you. Get your food delivered right to your home in minutes.</p>
+          <button class="mt-6 bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full">Order Now</button>
+
+          <div class="mt-6 flex gap-4">
+            <span class="bg-white px-4 py-2 rounded shadow text-sm font-bold">VISA</span>
+            <span class="bg-white px-4 py-2 rounded shadow text-sm font-bold">PayPal</span>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="w-36 h-36 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500 text-white flex items-center justify-center text-5xl font-bold shadow-lg">
+            25%<br><span class="text-sm">OFF</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-yellow-200 py-16 mt-10">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900">Thank you for being a valuable customer to us.</h3>
+          <p class="mt-2 text-gray-700">We have a surprise gift for you.</p>
+        </div>
+
+        <div class="w-52 h-52 bg-gradient-to-br from-red-600 to-red-800 rounded-xl shadow-2xl relative">
+          <div class="absolute inset-x-4 top-8 h-8 bg-yellow-400 rounded"></div>
+          <div class="absolute left-1/2 top-0 -translate-x-1/2 w-3 h-28 bg-yellow-400"></div>
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 border-4 border-yellow-300 rounded-md"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#0d2d49] text-white pt-12 pb-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold">Follow Us</h3>
+      <div class="flex justify-center gap-6 mt-6 text-xl">
+        <span class="w-10 h-10 bg-white text-gray-900 rounded-full flex items-center justify-center">X</span>
+        <span class="w-10 h-10 bg-white text-gray-900 rounded-full flex items-center justify-center">◎</span>
+        <span class="w-10 h-10 bg-white text-gray-900 rounded-full flex items-center justify-center">f</span>
+      </div>
+
+      <div class="mt-10 flex flex-col items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center font-bold">F</div>
+        <div class="text-lg font-bold">Food Munch</div>
+        <p class="text-sm text-gray-300">foodmunch@gmail.com</p>
+        <p class="text-sm text-gray-300">93/8,Ramaoorthy pudhur,Puthumariyamman Kovil Post office,Ponnamept,salem-636003</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
