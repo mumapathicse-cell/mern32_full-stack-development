@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101010" />
+    <title>Update Password</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="password-panel" aria-labelledby="page-title">
+        <h1 id="page-title">Update Password</h1>
+
+        <form id="updatePasswordForm" novalidate>
+          <div class="form-field">
+            <label for="newPassword">New Password</label>
+            <input
+              id="newPassword"
+              name="newPassword"
+              type="password"
+              placeholder="Create new password"
+              autocomplete="new-password"
+              aria-describedby="newPasswordErrMsg"
+            />
+            <p class="error-message" id="newPasswordErrMsg" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              placeholder="Confirm password"
+              autocomplete="new-password"
+              aria-describedby="confirmPasswordErrMsg"
+            />
+            <p class="error-message" id="confirmPasswordErrMsg" aria-live="polite"></p>
+          </div>
+
+          <button id="updateBtn" type="submit">Update</button>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

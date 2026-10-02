@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: #fff;
+  background: #101010;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px 18px;
+}
+
+.password-panel {
+  width: min(100%, 538px);
+  min-height: 556px;
+  padding: 58px 66px 48px;
+  background: linear-gradient(160deg, #f593ad 0%, #d47fb7 47%, #9668c5 100%);
+}
+
+h1 {
+  margin: 0 0 52px;
+  color: #fff;
+  font-size: clamp(32px, 6vw, 54px);
+  font-weight: 700;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.form-field {
+  margin-bottom: 26px;
+}
+
+label {
+  display: block;
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  width: 100%;
+  min-height: 57px;
+  padding: 12px 18px;
+  border: 1px solid #e7dce8;
+  border-radius: 5px;
+  color: #29313b;
+  background: #fff;
+  font-size: 20px;
+}
+
+input::placeholder {
+  color: #69717b;
+  opacity: 1;
+}
+
+input:focus-visible {
+  outline: 3px solid #642b85;
+  outline-offset: 2px;
+}
+
+input[aria-invalid="true"] {
+  border-color: #a01d31;
+}
+
+.error-message {
+  min-height: 18px;
+  margin: 5px 0 0;
+  color: #7f1426;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+button {
+  display: block;
+  min-width: 115px;
+  min-height: 58px;
+  margin: 6px auto 0;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  background: #0878e8;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+  background: #0566c7;
+  transform: translateY(-1px);
+}
+
+button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  .password-panel {
+    min-height: 0;
+    padding: 38px 24px 34px;
+  }
+
+  h1 {
+    margin-bottom: 38px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    min-height: 52px;
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
