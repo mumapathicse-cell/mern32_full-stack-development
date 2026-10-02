@@ -1,0 +1,16 @@
+{
+  "name": "reactjs-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hook-form": "^7.89.0",
+    "vite": "latest"
+  }
+}

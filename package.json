@@ -4,6 +4,7 @@
     "bcryptjs": "^3.0.3",
     "jose": "^6.2.10",
     "razorpay": "^2.9.8",
+    "react-hook-form": "^7.89.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {

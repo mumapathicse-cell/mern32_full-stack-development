@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PF Growth Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">₹</div>
+          <div>
+            <p class="eyebrow">Retirement planning</p>
+            <h1>PF Growth Dashboard</h1>
+          </div>
+        </div>
+        <div class="rate-badge">
+          <span>Current PF rate</span>
+          <strong id="rateBadge">8.15%</strong>
+        </div>
+      </header>
+
+      <main class="dashboard-grid">
+        <section class="panel calculator-panel">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Calculator</p>
+              <h2>Provident Fund Projection</h2>
+            </div>
+          </div>
+
+          <form id="pfForm" class="pf-form">
+            <div class="input-grid">
+              <label>
+                <span>Monthly basic salary</span>
+                <div class="field-wrap">
+                  <span class="currency">₹</span>
+                  <input id="salary" type="number" min="0" step="1000" value="50000" />
+                </div>
+              </label>
+
+              <label>
+                <span>Employee contribution</span>
+                <div class="field-wrap">
+                  <input id="employeeRate" type="number" min="0" max="100" step="0.1" value="12" />
+                  <span class="suffix">%</span>
+                </div>
+              </label>
+
+              <label>
+                <span>Employer contribution</span>
+                <div class="field-wrap">
+                  <input id="employerRate" type="number" min="0" max="100" step="0.1" value="12" />
+                  <span class="suffix">%</span>
+                </div>
+              </label>
+
+              <label>
+                <span>Current PF balance</span>
+                <div class="field-wrap">
+                  <span class="currency">₹</span>
+                  <input id="currentBalance" type="number" min="0" step="1000" value="250000" />
+                </div>
+              </label>
+
+              <label>
+                <span>PF interest rate</span>
+                <div class="field-wrap">
+                  <input id="interestRate" type="number" min="0" max="20" step="0.05" value="8.15" />
+                  <span class="suffix">%</span>
+                </div>
+              </label>
+
+              <label>
+                <span>Projection years</span>
+                <div class="field-wrap">
+                  <input id="years" type="number" min="1" max="40" step="1" value="15" />
+                  <span class="suffix">Yrs</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="preset-row">
+              <button type="button" class="preset active" data-rate="8.15">8.15%</button>
+              <button type="button" class="preset" data-rate="8.25">8.25%</button>
+              <button type="button" class="preset" data-rate="8.5">8.5%</button>
+              <button type="button" class="preset" data-rate="9.0">9.0%</button>
+            </div>
+
+            <button type="submit" class="primary-button">Calculate PF growth</button>
+          </form>
+        </section>
+
+        <aside class="panel summary-panel">
+          <div class="summary-card primary">
+            <span>Projected maturity</span>
+            <strong id="projectedValue">₹0</strong>
+          </div>
+
+          <div class="summary-card">
+            <span>Total invested</span>
+            <strong id="totalInvested">₹0</strong>
+          </div>
+
+          <div class="summary-card">
+            <span>Total interest</span>
+            <strong id="totalInterest">₹0</strong>
+          </div>
+
+          <div class="donut-card">
+            <div class="donut-wrap">
+              <div class="donut-ring">
+                <div class="donut-inner">
+                  <span id="interestPercent">0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="donut-legend">
+              <div><span class="dot employee-dot"></span>Employee</div>
+              <div><span class="dot employer-dot"></span>Employer</div>
+              <div><span class="dot interest-dot"></span>Interest</div>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <section class="panel chart-panel">
+        <div class="section-header compact">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h2>Year-by-year balance growth</h2>
+          </div>
+          <div class="rate-label">Rate <strong id="yearRateLabel">8.15%</strong></div>
+        </div>
+        <div id="yearBarChart" class="year-bar-chart" aria-label="PF balance chart"></div>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="section-header compact">
+          <div>
+            <p class="eyebrow">Detailed view</p>
+            <h2>Annual PF schedule</h2>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Opening</th>
+                <th>Contribution</th>
+                <th>Interest</th>
+                <th>Closing</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
